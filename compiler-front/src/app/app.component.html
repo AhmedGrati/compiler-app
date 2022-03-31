@@ -1,0 +1,26 @@
+ <div class="row">
+    <div class="col">
+      <ngs-code-editor
+        [theme]="theme"
+        [codeModel]="codeModel"
+        [options]="options"
+        (valueChanged)="onCodeChanged($event)"
+        class="editor"
+      >
+      </ngs-code-editor>
+      <div class="container text-center">
+        <button (click)="compile()" class="mt-3 btn btn-info">
+          Compile
+        </button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="text-center">
+        <h3>Output
+        </h3>
+        <div>
+          {{ output }}
+        </div>
+      </div>
+    </div>
+</div>
